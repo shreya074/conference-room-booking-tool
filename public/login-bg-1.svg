@@ -1,0 +1,19 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#E4D6C2"/>
+  <rect y="500" width="1200" height="300" fill="#E8D7C0"/>
+  <rect x="760" y="390" width="320" height="170" rx="86" fill="#C9B19B"/>
+  <rect x="740" y="500" width="410" height="120" rx="60" fill="#BCA089"/>
+  <rect x="130" y="220" width="220" height="16" rx="8" fill="#9D8976"/>
+  <rect x="380" y="220" width="220" height="16" rx="8" fill="#9D8976"/>
+  <rect x="280" y="560" width="250" height="14" rx="7" fill="#D1BCA3"/>
+  <rect x="120" y="80" width="5" height="640" fill="#9A8A79"/>
+  <g opacity="0.28">
+    <path d="M0 560H1200" stroke="#BCA68D" stroke-width="2"/>
+    <path d="M0 620H1200" stroke="#BCA68D" stroke-width="2"/>
+    <path d="M0 680H1200" stroke="#BCA68D" stroke-width="2"/>
+    <path d="M180 500V800" stroke="#BCA68D" stroke-width="2"/>
+    <path d="M420 500V800" stroke="#BCA68D" stroke-width="2"/>
+    <path d="M660 500V800" stroke="#BCA68D" stroke-width="2"/>
+    <path d="M900 500V800" stroke="#BCA68D" stroke-width="2"/>
+  </g>
+</svg>

@@ -1,0 +1,301 @@
+@import "tailwindcss";
+
+:root {
+  --background: #eef1ff;
+  --foreground: #111827;
+  --brand-primary: #5444e8;
+  --brand-primary-soft: #ece9ff;
+  --brand-accent: #00a98f;
+  --brand-surface: #f7f8ff;
+  --brand-ink: #1f2440;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-heading);
+  --font-mono: var(--font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--foreground);
+  background:
+    radial-gradient(circle at 10% 10%, rgba(84, 68, 232, 0.18), transparent 40%),
+    radial-gradient(circle at 90% 15%, rgba(0, 169, 143, 0.12), transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(84, 68, 232, 0.08), transparent 45%),
+    linear-gradient(180deg, #f5f7ff 0%, #f0f5ff 55%, #eef7ff 100%);
+  font-family: var(--font-body), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), sans-serif;
+}
+
+.lux-shell {
+  position: relative;
+}
+
+.lux-grid-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.3;
+  background-image:
+    linear-gradient(rgba(84, 68, 232, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(84, 68, 232, 0.07) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(circle at center, black 45%, transparent 88%);
+}
+
+.lux-card {
+  position: relative;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.93) 0%,
+      rgba(247, 248, 255, 0.9) 35%,
+      rgba(244, 251, 255, 0.9) 100%
+    );
+  backdrop-filter: blur(6px);
+  box-shadow:
+    0 12px 35px -26px rgba(2, 8, 23, 0.65),
+    0 2px 10px -8px rgba(84, 68, 232, 0.35);
+}
+
+.card-lift {
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-3px);
+  border-color: rgba(84, 68, 232, 0.45);
+  box-shadow:
+    0 20px 45px -24px rgba(2, 8, 23, 0.6),
+    0 8px 16px -14px rgba(84, 68, 232, 0.5);
+}
+
+.shimmer-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-btn::after {
+  content: "";
+  position: absolute;
+  top: -150%;
+  left: -60%;
+  width: 48%;
+  height: 300%;
+  transform: rotate(18deg);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.38),
+    transparent
+  );
+  transition: left 320ms ease;
+}
+
+.shimmer-btn:hover::after {
+  left: 130%;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 520ms ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 80ms;
+}
+
+.delay-2 {
+  animation-delay: 140ms;
+}
+
+.delay-3 {
+  animation-delay: 200ms;
+}
+
+.delay-4 {
+  animation-delay: 260ms;
+}
+
+.premium-shell {
+  position: relative;
+}
+
+.premium-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(84, 68, 232, 0.08), transparent 28%),
+    radial-gradient(circle at 88% 80%, rgba(0, 169, 143, 0.06), transparent 32%);
+}
+
+@keyframes chatPop {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.chat-pop {
+  animation: chatPop 180ms ease-out;
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 24px 45px -20px rgba(58, 45, 179, 0.9);
+  }
+
+  50% {
+    box-shadow: 0 26px 48px -18px rgba(82, 66, 233, 0.95);
+  }
+}
+
+.chat-fab {
+  animation: pulseGlow 2.2s ease-in-out infinite;
+}
+
+.auth-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(183, 145, 92, 0.22), transparent 34%),
+    radial-gradient(circle at 90% 12%, rgba(100, 85, 66, 0.18), transparent 36%),
+    linear-gradient(180deg, #f8f5f0 0%, #f2eee7 45%, #ece8df 100%);
+}
+
+.auth-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    150deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.18) 35%,
+    rgba(237, 229, 215, 0.3) 100%
+  );
+}
+
+.auth-collage {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.62;
+  filter: saturate(1);
+}
+
+.auth-collage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.38), transparent 42%),
+    radial-gradient(circle at 85% 80%, rgba(255, 255, 255, 0.32), transparent 45%),
+    linear-gradient(180deg, rgba(250, 247, 240, 0.22) 0%, rgba(248, 243, 235, 0.36) 100%);
+}
+
+.auth-collage-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  height: 100%;
+  padding: 80px 18px 24px;
+}
+
+.auth-scene {
+  border-radius: 22px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 30px 52px -44px rgba(38, 30, 19, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.auth-scene:nth-child(1) {
+  background-image: url("/login-bg-1.svg");
+}
+
+.auth-scene:nth-child(2) {
+  background-image: url("/login-bg-2.svg");
+}
+
+.auth-scene:nth-child(3) {
+  background-image: url("/login-bg-3.svg");
+}
+
+.auth-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.auth-card {
+  width: min(460px, 100%);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  background: linear-gradient(
+    150deg,
+    rgba(255, 255, 255, 0.94) 0%,
+    rgba(255, 255, 255, 0.88) 40%,
+    rgba(245, 240, 231, 0.78) 100%
+  );
+  box-shadow:
+    0 28px 60px -42px rgba(43, 33, 20, 0.8),
+    0 10px 25px -18px rgba(83, 64, 38, 0.55);
+  backdrop-filter: blur(8px);
+}
+
+.auth-logo {
+  display: block;
+  height: auto;
+  width: min(250px, 88%);
+}
+
+@media (max-width: 900px) {
+  .auth-collage-grid {
+    grid-template-columns: 1fr;
+    padding-top: 110px;
+  }
+
+  .auth-scene {
+    min-height: 190px;
+  }
+}

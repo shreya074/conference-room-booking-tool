@@ -1,0 +1,20 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#F7F8FA"/>
+  <rect y="510" width="1200" height="290" fill="#F3F4F6"/>
+  <path d="M0 540H1200" stroke="#D4D7DD" stroke-width="2"/>
+  <path d="M0 600H1200" stroke="#D4D7DD" stroke-width="2"/>
+  <path d="M0 660H1200" stroke="#D4D7DD" stroke-width="2"/>
+  <path d="M200 510V800" stroke="#D4D7DD" stroke-width="2"/>
+  <path d="M460 510V800" stroke="#D4D7DD" stroke-width="2"/>
+  <path d="M720 510V800" stroke="#D4D7DD" stroke-width="2"/>
+  <path d="M980 510V800" stroke="#D4D7DD" stroke-width="2"/>
+  <rect x="120" y="290" width="420" height="180" rx="10" fill="#2B303A"/>
+  <rect x="690" y="320" width="430" height="180" rx="90" fill="#E7E9EC"/>
+  <rect x="760" y="520" width="300" height="110" rx="55" fill="#E0E3E8"/>
+  <path d="M0 730C130 670 280 700 460 730C640 760 850 760 1200 690V800H0V730Z" fill="#ECEFF3"/>
+  <g opacity="0.32">
+    <path d="M90 530C180 550 280 500 350 520" stroke="#B6BBC4" stroke-width="4"/>
+    <path d="M410 700C520 720 610 650 730 680" stroke="#B6BBC4" stroke-width="4"/>
+    <path d="M760 560C860 590 970 520 1100 560" stroke="#B6BBC4" stroke-width="4"/>
+  </g>
+</svg>
